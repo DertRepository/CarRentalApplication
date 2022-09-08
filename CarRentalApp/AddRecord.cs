@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace CarRentalApp
 {
-    public partial class Form1 : Form
+    public partial class AddRecord : Form
     {
-        public Form1()
+        private readonly CarRentalEntities carRentalEntities;
+        public AddRecord()
         {
             InitializeComponent();
+            carRentalEntities = new CarRentalEntities();
         }
 
         private void Button1_Click(object sender,
@@ -43,7 +45,19 @@ namespace CarRentalApp
                     errorMesssage += "Illegal message \n";
                 }
                 if (isValid)
-                    MessageBox.Show($"Type of Car: {carType} Rented: {dateOut} Returned: {dateIn} Cost: {cost}");
+                {
+                    var rentalRecored = new CarRental();
+                    rentalRecored.CustomerName = customerName;
+                    rentalRecored.DateRented = dateOut;
+                    rentalRecored.DateReturned = dateIn;
+                    rentalRecored.Const = (decimal) cost;
+                    rentalRecored.TypeOfCarId = (int) cbTypeCar.SelectedValue;
+
+                    carRentalEntities.CarRentals.Add(rentalRecored);
+                    carRentalEntities.SaveChanges();
+
+                    MessageBox.Show("Insert successfully");
+                }
                 else
                     MessageBox.Show(errorMesssage);
             }
@@ -52,6 +66,13 @@ namespace CarRentalApp
                 MessageBox.Show(ex.Message);
             }
 
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            var cars = carRentalEntities.TypeOfCars.ToList();
+            cbTypeCar.ValueMember = "Id";
+            cbTypeCar.DisplayMember = "Name";
+            cbTypeCar.DataSource = cars;
         }
     }
 }

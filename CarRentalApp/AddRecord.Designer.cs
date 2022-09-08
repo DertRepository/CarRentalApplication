@@ -1,6 +1,6 @@
 ﻿namespace CarRentalApp
 {
-    partial class Form1
+    partial class AddRecord
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddRecord));
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_header_title = new System.Windows.Forms.Label();
             this.tbCustomerName = new System.Windows.Forms.TextBox();
@@ -45,135 +46,85 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
-            this.label1.TabIndex = 0;
             // 
             // lbl_header_title
             // 
-            this.lbl_header_title.AutoSize = true;
-            this.lbl_header_title.Font = new System.Drawing.Font("Consolas", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_header_title.Location = new System.Drawing.Point(172, 9);
+            resources.ApplyResources(this.lbl_header_title, "lbl_header_title");
             this.lbl_header_title.Name = "lbl_header_title";
-            this.lbl_header_title.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_header_title.Size = new System.Drawing.Size(323, 38);
-            this.lbl_header_title.TabIndex = 1;
-            this.lbl_header_title.Text = "CAR RENTAL SYSTEM";
             // 
             // tbCustomerName
             // 
-            this.tbCustomerName.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCustomerName.Location = new System.Drawing.Point(12, 105);
-            this.tbCustomerName.Multiline = true;
+            resources.ApplyResources(this.tbCustomerName, "tbCustomerName");
             this.tbCustomerName.Name = "tbCustomerName";
-            this.tbCustomerName.Size = new System.Drawing.Size(247, 29);
-            this.tbCustomerName.TabIndex = 2;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 79);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 23);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Customer Name";
             // 
             // dtRented
             // 
-            this.dtRented.Location = new System.Drawing.Point(12, 188);
+            resources.ApplyResources(this.dtRented, "dtRented");
+            this.dtRented.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtRented.Name = "dtRented";
-            this.dtRented.Size = new System.Drawing.Size(247, 22);
-            this.dtRented.TabIndex = 4;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 162);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 23);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Date Rented";
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(410, 162);
+            resources.ApplyResources(this.label11, "label11");
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(153, 23);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "Date Returned";
             // 
             // dtReturned
             // 
-            this.dtReturned.Location = new System.Drawing.Point(414, 188);
+            resources.ApplyResources(this.dtReturned, "dtReturned");
+            this.dtReturned.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtReturned.Name = "dtReturned";
-            this.dtReturned.Size = new System.Drawing.Size(247, 22);
-            this.dtReturned.TabIndex = 6;
             // 
             // cbTypeCar
             // 
+            resources.ApplyResources(this.cbTypeCar, "cbTypeCar");
             this.cbTypeCar.BackColor = System.Drawing.SystemColors.Control;
             this.cbTypeCar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTypeCar.FormattingEnabled = true;
             this.cbTypeCar.Items.AddRange(new object[] {
-            "Honda",
-            "Toyota",
-            "Mazda",
-            "Chevorolet"});
-            this.cbTypeCar.Location = new System.Drawing.Point(12, 264);
+            resources.GetString("cbTypeCar.Items"),
+            resources.GetString("cbTypeCar.Items1"),
+            resources.GetString("cbTypeCar.Items2"),
+            resources.GetString("cbTypeCar.Items3")});
             this.cbTypeCar.Name = "cbTypeCar";
-            this.cbTypeCar.Size = new System.Drawing.Size(247, 24);
-            this.cbTypeCar.TabIndex = 8;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(8, 238);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 23);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Type Of Car";
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(414, 239);
+            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(247, 66);
-            this.btnSubmit.TabIndex = 10;
-            this.btnSubmit.Text = "SUBMIT";
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.Button1_Click);
             // 
             // tbCost
             // 
-            this.tbCost.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCost.Location = new System.Drawing.Point(414, 105);
-            this.tbCost.Multiline = true;
+            resources.ApplyResources(this.tbCost, "tbCost");
             this.tbCost.Name = "tbCost";
-            this.tbCost.Size = new System.Drawing.Size(247, 29);
-            this.tbCost.TabIndex = 11;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(410, 79);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 23);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Cost";
             // 
-            // Form1
+            // AddRecord
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 364);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbCost);
             this.Controls.Add(this.btnSubmit);
@@ -187,8 +138,9 @@
             this.Controls.Add(this.tbCustomerName);
             this.Controls.Add(this.lbl_header_title);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = " ";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Name = "AddRecord";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

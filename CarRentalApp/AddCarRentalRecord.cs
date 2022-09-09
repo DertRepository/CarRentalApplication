@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace CarRentalApp
 {
-    public partial class AddRecord : Form
+    public partial class AddCarRentalRecord : Form
     {
         private readonly CarRentalEntities carRentalEntities;
-        public AddRecord()
+        public AddCarRentalRecord()
         {
             InitializeComponent();
             carRentalEntities = new CarRentalEntities();
@@ -69,7 +69,10 @@ namespace CarRentalApp
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            var cars = carRentalEntities.TypeOfCars.ToList();
+            //var cars = carRentalEntities.TypeOfCars.ToList();
+            var cars = carRentalEntities.TypeOfCars.Select(value => new {
+                Name = value.Model + " " + value.Make,
+            }).ToList();
             cbTypeCar.ValueMember = "Id";
             cbTypeCar.DisplayMember = "Name";
             cbTypeCar.DataSource = cars;

@@ -1,6 +1,6 @@
 ﻿namespace CarRentalApp
 {
-    partial class AddRecord
+    partial class AddCarRentalRecord
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddRecord));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCarRentalRecord));
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_header_title = new System.Windows.Forms.Label();
             this.tbCustomerName = new System.Windows.Forms.TextBox();
@@ -121,7 +121,7 @@
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
             // 
-            // AddRecord
+            // AddCarRentalRecord
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -139,7 +139,7 @@
             this.Controls.Add(this.lbl_header_title);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Name = "AddRecord";
+            this.Name = "AddCarRentalRecord";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

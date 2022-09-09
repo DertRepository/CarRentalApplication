@@ -16,10 +16,19 @@ namespace CarRentalApp
         {
             InitializeComponent();
         }
-
-        private void manageListingToolStripMenuItem_Click(object sender, EventArgs e)
+        private void addRentalRecordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            var addCarRentalRecord = new AddCarRentalRecord();
+            addCarRentalRecord.MdiParent = this;
+            addCarRentalRecord.Show();
+            addCarRentalRecord.WindowState = FormWindowState.Maximized;
+        }
+        private void listingRentalRecordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var manageVehicleListing = new ManageVehicleListing();
+            manageVehicleListing.MdiParent = this;
+            manageVehicleListing.Show();
+            manageVehicleListing.WindowState = FormWindowState.Maximized;
         }
     }
 }

@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEditVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditVehicle.Designer.cs">
+      <DependentUpon>AddEditVehicle.cs</DependentUpon>
+    </Compile>
     <Compile Include="CarRental.cs">
       <DependentUpon>CarRentalDb.tt</DependentUpon>
     </Compile>
@@ -73,11 +79,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CarRentalDb.edmx</DependentUpon>
     </Compile>
-    <Compile Include="AddRecord.cs">
+    <Compile Include="AddCarRentalRecord.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddRecord.Designer.cs">
-      <DependentUpon>AddRecord.cs</DependentUpon>
+    <Compile Include="AddCarRentalRecord.Designer.cs">
+      <DependentUpon>AddCarRentalRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageVehicleListing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageVehicleListing.Designer.cs">
+      <DependentUpon>ManageVehicleListing.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -90,14 +102,20 @@
     <Compile Include="TypeOfCar.cs">
       <DependentUpon>CarRentalDb.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddRecord.aa.resx">
-      <DependentUpon>AddRecord.cs</DependentUpon>
+    <EmbeddedResource Include="AddCarRentalRecord.aa.resx">
+      <DependentUpon>AddCarRentalRecord.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddRecord.resx">
-      <DependentUpon>AddRecord.cs</DependentUpon>
+    <EmbeddedResource Include="AddCarRentalRecord.resx">
+      <DependentUpon>AddCarRentalRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditVehicle.resx">
+      <DependentUpon>AddEditVehicle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageVehicleListing.resx">
+      <DependentUpon>ManageVehicleListing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

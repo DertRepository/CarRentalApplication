@@ -67,7 +67,7 @@ namespace CarRentalApp
 
             RefreshGv();
         }
-        private void RefreshGv()
+        public void RefreshGv()
         {
             var cars = _db.TypeOfCars.Select(value => new
             {

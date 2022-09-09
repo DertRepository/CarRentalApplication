@@ -14,16 +14,19 @@ namespace CarRentalApp
     {
         private bool isEditMode;
         private readonly CarRentalEntities _db;
+        private readonly ManageVehicleListing _manageVehicleListing;
         public AddEditVehicle()
         {
             InitializeComponent();
             _db = new CarRentalEntities();
+            _manageVehicleListing = new ManageVehicleListing();
             lbl_header_title.Text = "ADD VEHICLE";
             isEditMode = false;
         }
         public AddEditVehicle(TypeOfCar carToEdit)
         {
             InitializeComponent();
+            _manageVehicleListing = new ManageVehicleListing();
             _db = new CarRentalEntities();
             lbl_header_title.Text = "EDIT VEHICLE";
             isEditMode = true;
@@ -53,6 +56,7 @@ namespace CarRentalApp
                 _db.SaveChanges();
 
                 MessageBox.Show("Successfully");
+                _manageVehicleListing.RefreshGv();
             }
             else
             {
@@ -66,11 +70,13 @@ namespace CarRentalApp
                 };
                 _db.TypeOfCars.Add(car);
                 _db.SaveChanges();
+                _manageVehicleListing.RefreshGv();
                 MessageBox.Show("Successfully");
             }
         }
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            _manageVehicleListing.RefreshGv();
             this.Close();
         }
 

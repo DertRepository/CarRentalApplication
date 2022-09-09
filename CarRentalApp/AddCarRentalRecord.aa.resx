@@ -118,15 +118,126 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbl_header_title.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 9</value>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 29</value>
   </data>
-  <data name="btnSubmit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 53</value>
+  <data name="lbl_header_title.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 11</value>
+  </data>
+  <data name="lbl_header_title.Size" type="System.Drawing.Size, System.Drawing">
+    <value>394, 47</value>
+  </data>
+  <data name="tbCustomerName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 10pt</value>
+  </data>
+  <data name="tbCustomerName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 131</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tbCustomerName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="tbCustomerName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 35</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 10pt</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 99</value>
+  </data>
+  <data name="dtRented.CalendarFont" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 10pt</value>
+  </data>
+  <data name="dtRented.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 235</value>
+  </data>
+  <data name="dtRented.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="dtRented.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 30</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 10pt</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 202</value>
+  </data>
+  <data name="label11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 10pt</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>461, 202</value>
+  </data>
+  <data name="dtReturned.CalendarFont" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 10pt</value>
+  </data>
+  <data name="dtReturned.Location" type="System.Drawing.Point, System.Drawing">
+    <value>466, 235</value>
+  </data>
+  <data name="dtReturned.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="dtReturned.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 30</value>
+  </data>
+  <data name="cbTypeCar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 10pt</value>
+  </data>
+  <data name="cbTypeCar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 330</value>
+  </data>
+  <data name="cbTypeCar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="cbTypeCar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 31</value>
+  </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 10pt</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 298</value>
+  </data>
+  <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>466, 299</value>
+  </data>
+  <data name="btnSubmit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="btnSubmit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>278, 66</value>
+  </data>
+  <data name="tbCost.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 10pt</value>
+  </data>
+  <data name="tbCost.Location" type="System.Drawing.Point, System.Drawing">
+    <value>466, 131</value>
+  </data>
+  <data name="tbCost.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="tbCost.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 35</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 10pt</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>461, 99</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>9, 20</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>757, 455</value>
+  </data>
   <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>On</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value> Add Car Rental Record</value>

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Monkey\source\repos\CarRentalApp\CarRentalApp\CarRentalDb.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\vandert.thuy\Source\Repos\DertRepository\CarRentalApplication\CarRentalApp\CarRentalDb.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

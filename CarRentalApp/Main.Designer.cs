@@ -45,14 +45,15 @@
             this.manageToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1129, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1270, 33);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // listingRentalRecordToolStripMenuItem
             // 
             this.listingRentalRecordToolStripMenuItem.Name = "listingRentalRecordToolStripMenuItem";
-            this.listingRentalRecordToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.listingRentalRecordToolStripMenuItem.Size = new System.Drawing.Size(192, 29);
             this.listingRentalRecordToolStripMenuItem.Text = "Listing Rental Record";
             this.listingRentalRecordToolStripMenuItem.Click += new System.EventHandler(this.listingRentalRecordToolStripMenuItem_Click);
             // 
@@ -64,38 +65,40 @@
             this.editRentalRecordToolStripMenuItem});
             this.manageToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
-            this.manageToolStripMenuItem.Size = new System.Drawing.Size(203, 24);
+            this.manageToolStripMenuItem.Size = new System.Drawing.Size(266, 29);
             this.manageToolStripMenuItem.Text = "Manage Rental Record";
             // 
             // addRentalRecordToolStripMenuItem
             // 
             this.addRentalRecordToolStripMenuItem.Name = "addRentalRecordToolStripMenuItem";
-            this.addRentalRecordToolStripMenuItem.Size = new System.Drawing.Size(254, 26);
+            this.addRentalRecordToolStripMenuItem.Size = new System.Drawing.Size(326, 34);
             this.addRentalRecordToolStripMenuItem.Text = "Add Rental Record";
             this.addRentalRecordToolStripMenuItem.Click += new System.EventHandler(this.addRentalRecordToolStripMenuItem_Click);
             // 
             // viewArchiveToolStripMenuItem
             // 
             this.viewArchiveToolStripMenuItem.Name = "viewArchiveToolStripMenuItem";
-            this.viewArchiveToolStripMenuItem.Size = new System.Drawing.Size(254, 26);
+            this.viewArchiveToolStripMenuItem.Size = new System.Drawing.Size(326, 34);
             this.viewArchiveToolStripMenuItem.Text = "View Archive";
             // 
             // editRentalRecordToolStripMenuItem
             // 
             this.editRentalRecordToolStripMenuItem.Name = "editRentalRecordToolStripMenuItem";
-            this.editRentalRecordToolStripMenuItem.Size = new System.Drawing.Size(254, 26);
+            this.editRentalRecordToolStripMenuItem.Size = new System.Drawing.Size(326, 34);
             this.editRentalRecordToolStripMenuItem.Text = "Edit Rental Record";
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1129, 668);
+            this.ClientSize = new System.Drawing.Size(1270, 835);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Main";
             this.Text = "Car Rental System";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -60,18 +60,37 @@ namespace CarRentalApp
             }
             else
             {
-                var car = new TypeOfCar()
+                try
                 {
-                    Make = tbMake.Text,
-                    Model = tbModel.Text,
-                    VIN = tbVin.Text,
-                    LicensePlatNumber = tbLicense.Text,
-                    Year = int.Parse(tbYear.Text)
-                };
-                _db.TypeOfCars.Add(car);
-                _db.SaveChanges();
-                _manageVehicleListing.RefreshGv();
-                MessageBox.Show("Successfully");
+                    var msg = "";
+                    var isNumberic = int.TryParse(tbYear.Text, out _);
+                    if (tbMake.Text == "" || tbModel.Text == "" || tbVin.Text =="")
+                        msg += "Please input data";
+                    else if (!isNumberic)
+                        msg += "Please input integer in field year";
+                    else
+                    {
+                        var car = new TypeOfCar()
+                        {
+                            Make = tbMake.Text,
+                            Model = tbModel.Text,
+                            VIN = tbVin.Text,
+                            LicensePlatNumber = tbLicense.Text,
+                            Year = int.Parse(tbYear.Text)
+                        };
+                        _db.TypeOfCars.Add(car);
+                        _db.SaveChanges();
+                        _manageVehicleListing.RefreshGv();
+                        msg += "Adding successfully";
+                    }
+                    MessageBox.Show(msg);
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+
             }
         }
         private void btnCancel_Click(object sender, EventArgs e)

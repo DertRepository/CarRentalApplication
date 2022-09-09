@@ -1,8 +1,11 @@
-﻿using System;
+﻿using ClosedXML.Excel;
+using OfficeOpenXml;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,6 +56,7 @@ namespace CarRentalApp
         {
             var id = (int) gvVehicleList.SelectedRows[0].Cells["Id"].Value;
             var car = _db.TypeOfCars.FirstOrDefault(value => value.Id == id);
+
             var addEditVehicle = new AddEditVehicle(car);
             addEditVehicle.MdiParent = this.MdiParent;
             addEditVehicle.Show();
@@ -60,12 +64,20 @@ namespace CarRentalApp
 
         private void btnDeleteCar_Click(object sender, EventArgs e)
         {
-            var id = (int)gvVehicleList.SelectedRows[0].Cells["Id"].Value;
-            var car = _db.TypeOfCars.FirstOrDefault(value => value.Id == id);
-            _db.TypeOfCars.Remove(car);
-            _db.SaveChanges();
+            try
+            {
+                var id = (int)gvVehicleList.SelectedRows[0].Cells["Id"].Value;
+                var car = _db.TypeOfCars.FirstOrDefault(value => value.Id == id);
+                _db.TypeOfCars.Remove(car);
+                _db.SaveChanges();
 
-            RefreshGv();
+                MessageBox.Show("Successsfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
         public void RefreshGv()
         {
@@ -83,6 +95,30 @@ namespace CarRentalApp
         private void btnRefreshCar_Click(object sender, EventArgs e)
         {
             RefreshGv();
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            if (gvVehicleList.Rows.Count > 0)
+            {
+                Microsoft.Office.Interop.Excel.Application xcelApp = new Microsoft.Office.Interop.Excel.Application();
+                xcelApp.Application.Workbooks.Add(Type.Missing);
+
+                for (int i = 1; i < gvVehicleList.Columns.Count + 1; i++)
+                {
+                    xcelApp.Cells[1, i] = gvVehicleList.Columns[i - 1].HeaderText;
+                }
+
+                for (int i = 0; i < gvVehicleList.Rows.Count; i++)
+                {
+                    for (int j = 0; j < gvVehicleList.Columns.Count; j++)
+                    {
+                        xcelApp.Cells[i + 2, j + 1] = gvVehicleList.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+                xcelApp.Columns.AutoFit();
+                xcelApp.Visible = true;
+            }
         }
     }
 }

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCarRentalRecord));
             this.label1 = new System.Windows.Forms.Label();
-            this.lbl_header_title = new System.Windows.Forms.Label();
+            this.lbTitle = new System.Windows.Forms.Label();
             this.tbCustomerName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtRented = new System.Windows.Forms.DateTimePicker();
@@ -49,10 +49,10 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // lbl_header_title
+            // lbTitle
             // 
-            resources.ApplyResources(this.lbl_header_title, "lbl_header_title");
-            this.lbl_header_title.Name = "lbl_header_title";
+            resources.ApplyResources(this.lbTitle, "lbTitle");
+            this.lbTitle.Name = "lbTitle";
             // 
             // tbCustomerName
             // 
@@ -136,7 +136,7 @@
             this.Controls.Add(this.dtRented);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbCustomerName);
-            this.Controls.Add(this.lbl_header_title);
+            this.Controls.Add(this.lbTitle);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "AddCarRentalRecord";
@@ -149,7 +149,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbl_header_title;
+        private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.TextBox tbCustomerName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtRented;

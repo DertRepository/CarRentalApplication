@@ -39,6 +39,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.listingRentalRecordToolStripMenuItem,
@@ -80,6 +81,7 @@
             this.viewArchiveToolStripMenuItem.Name = "viewArchiveToolStripMenuItem";
             this.viewArchiveToolStripMenuItem.Size = new System.Drawing.Size(326, 34);
             this.viewArchiveToolStripMenuItem.Text = "View Archive";
+            this.viewArchiveToolStripMenuItem.Click += new System.EventHandler(this.viewArchiveToolStripMenuItem_Click);
             // 
             // editRentalRecordToolStripMenuItem
             // 

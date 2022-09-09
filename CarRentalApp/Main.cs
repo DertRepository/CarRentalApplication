@@ -36,5 +36,13 @@ namespace CarRentalApp
         private void Main_Load(object sender, EventArgs e)
         {
         }
+
+        private void viewArchiveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var manageRentalRecord = new ManageRentalRecord();
+            manageRentalRecord.MdiParent = this;
+            manageRentalRecord.Show();
+            manageRentalRecord.WindowState = FormWindowState.Maximized;
+        }
     }
 }
